@@ -2,7 +2,7 @@
 
 Are you tired of the hassle in creating WhatsApp study groups for your university courses? Say goodbye to the manual process and welcome the "WA Group Link Generator"! I'm thrilled to share my latest project that aims to streamline the creation of WhatsApp group links for educational purposes, making it easier than ever for students to connect and collaborate.
 
-🔗 GitHub Repository: [Your GitHub Repository Link]
+🔗 GitHub Repository:https://github.com/Pradyumna-yes/Whatsapp-Group-Link-Generator.git
 
 📜 Project Overview:
 The WA Group Link Generator is a powerful web application built using Node.js, Express, and MySQL. It offers a user-friendly interface, allowing students to enter their essential details, such as name, phone number, email, semester, and course. Dynamic dropdowns enable smooth selection of universities and courses from predefined options.
