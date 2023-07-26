@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bustudymate WA Group Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Generate Your WA Group Link</h1>
+    <form id="studentForm" action="process_form.php" method="post">
+        <label for="University">Your University:</label>
+        <select id="University" name="University" required>
+            <option value="">Select University</option>
+            <option value="BU">BU</option>
+            <option value="BCU">BCU</option>
+            <option value="BNU">BNU</option>
+         </select>
+        <div id="semesterError" class="error"></div><br>
+
+        <label for="course">Your Course:</label>
+        <select id="course" name="course" required>
+            <option value="">Select Course</option>
+            <option value="BCOM">BCOM</option>
+            <option value="BBA">BBA</option>
+            <option value="BCA">BCA</option>
+            <option value="BSC">BSC</option>
+            <option value="MBA">MBA</option>
+            <option value="MCA">MCA</option>
+        </select>
+        <div id="courseError" class="error"></div><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+    document.getElementById("studentForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        if (validateForm()) {
+            redirectToUniqueLink();
+        }
+    });
+
+    function validateForm() {
+        const university = document.getElementById("University").value;
+        const course = document.getElementById("course").value;
+
+        // Reset previous error messages
+        document.getElementById("semesterError").innerText = "";
+        document.getElementById("courseError").innerText = "";
+
+        let isValid = true;
+
+        // Validate University
+        if (university === "") {
+            document.getElementById("semesterError").innerText = "Please select your university.";
+            isValid = false;
+        }
+
+        // Validate Course
+        if (course === "") {
+            document.getElementById("courseError").innerText = "Please select your course.";
+            isValid = false;
+        }
+
+        return isValid;
+    }
+
+    function redirectToUniqueLink() {
+        // TODO: Implement logic to generate the unique link based on university and course
+        // and redirect the user to that link.
+        const university = document.getElementById("University").value;
+        const course = document.getElementById("course").value;
+        // Add your logic here to generate the unique link based on university and course.
+        const uniqueLink = "https://bit.ly/BSM" + university + "" + course;
+        window.location.href = uniqueLink;
+    }
+</script>
+
+    <h4>How TO??</h4>
+        <p>Select your University, Course, and click on submit</p>
+</body>
+</html>
